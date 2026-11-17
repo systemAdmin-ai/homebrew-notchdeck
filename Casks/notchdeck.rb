@@ -1,6 +1,6 @@
 cask "notchdeck" do
-  version "2.0.1"
-  sha256 "431041c00338d68d1f0cd159fa75763245808a4606b3b8cdbf93836ba2b962e7"
+  version "2.1.0"
+  sha256 "8356fd81624f7f50bc065d8729ef4267e5d764bf017fa41c8fed968d03e27aaa"
 
   url "https://github.com/systemAdmin-ai/NotchDeck/releases/download/v#{version}-preview.1/NotchDeck.dmg",
       verified: "github.com/systemAdmin-ai/NotchDeck/"
@@ -19,9 +19,9 @@ cask "notchdeck" do
   app "NotchDeck.app"
 
   caveats <<~EOS
-    NotchDeck is ad-hoc signed, not notarized by Apple. The first launch may be
-    blocked by Gatekeeper. Homebrew removes the quarantine flag on install, so
-    the app should open normally. If macOS still refuses, run:
+    NotchDeck is ad-hoc signed, not notarized by Apple, so macOS may block the
+    first launch. Clear the quarantine flag once with:
       xattr -dr com.apple.quarantine "#{appdir}/NotchDeck.app"
+    Or install without quarantine: brew install --cask --no-quarantine notchdeck
   EOS
 end
