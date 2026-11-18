@@ -1,6 +1,6 @@
 cask "notchdeck" do
-  version "2.1.0"
-  sha256 "8356fd81624f7f50bc065d8729ef4267e5d764bf017fa41c8fed968d03e27aaa"
+  version "2.1.1"
+  sha256 "0457bbf76a88d9d959b90f370d78adc8e32c3fcebb950238467d86c285ebc248"
 
   url "https://github.com/systemAdmin-ai/NotchDeck/releases/download/v#{version}-preview.1/NotchDeck.dmg",
       verified: "github.com/systemAdmin-ai/NotchDeck/"
